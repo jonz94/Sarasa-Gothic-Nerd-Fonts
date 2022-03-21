@@ -39,13 +39,13 @@ brew tap jonz94/sarasa-nerd-fonts
 - Then all the variant of font can be installed as a brew cask, e.g.
 
 ```bash
-brew install sarasa-mono-tc-nerd-font
+brew install font-sarasa-mono-tc-nerd-font
 ```
 
 - Or you can do it in a one-liner!
 
 ```bash
-brew install jonz94/sarasa-nerd-fonts/sarasa-mono-tc-nerd-font
+brew install jonz94/sarasa-nerd-fonts/font-sarasa-mono-tc-nerd-font
 ```
 
 ### Using Shell Script on Linux
