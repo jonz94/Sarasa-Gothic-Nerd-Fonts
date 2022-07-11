@@ -18,34 +18,46 @@ This project is a modified version of [adam7/delugia-code](https://github.com/ad
 
 - Add [scoop-sarasa-nerd-fonts](https://github.com/jonz94/scoop-sarasa-nerd-fonts) as custom scoop bucket
 
-```
+```shell
 scoop bucket add sarasa-nerd-fonts https://github.com/jonz94/scoop-sarasa-nerd-fonts
 ```
 
 - Then all the variant of font can be installed as a scoop app, e.g.
 
-```
+```shell
+# install Sarasa Mono TC Nerd Font
 scoop install sarasa-mono-tc-nerd-font
+
+# or, install all-in-one ttc
+scoop install sarasa-nerd-font-ttc
 ```
 
 ### Using [Homebrew](https://brew.sh/)
 
 - Add [homebrew-sarasa-nerd-fonts](https://github.com/jonz94/homebrew-sarasa-nerd-fonts) as a custom tap
 
-```bash
+```shell
 brew tap jonz94/sarasa-nerd-fonts
 ```
 
 - Then all the variant of font can be installed as a brew cask, e.g.
 
-```bash
+```shell
+# install Sarasa Mono TC Nerd Font
 brew install font-sarasa-mono-tc-nerd-font
+
+# or, install all-in-one ttc format
+brew install font-sarasa-nerd-font-ttc
 ```
 
 - Or you can do it in a one-liner!
 
-```bash
+```shell
+# install Sarasa Mono TC Nerd Font
 brew install jonz94/sarasa-nerd-fonts/font-sarasa-mono-tc-nerd-font
+
+# or, install all-in-one ttc format
+brew install jonz94/sarasa-nerd-fonts/font-sarasa-nerd-font-ttc
 ```
 
 ### Using Shell Script on Linux
