@@ -80,7 +80,7 @@ jobs:
         run: pip install configparser
       - run: ls -l
       - name: patch font
-        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}"
+        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}"
       - run: ls -l
       - name: rename patched font files
         run: mv *Complete.ttf "${FILENAME}-nerd-font.ttf"
@@ -182,7 +182,7 @@ jobs:
         run: pip install configparser
       - run: ls -l
       - name: patch font
-        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}"
+        run: fontforge -script "${PWD}/font-patcher" --adjust-line-height --careful --complete --no-progressbars --quiet --removeligatures "${PWD}/${FILENAME}.ttf" --outputdir "${PWD}"
       - run: ls -l
       - name: rename patched font files
         run: mv *Complete.ttf "${FILENAME}-nerd-font.ttf"
