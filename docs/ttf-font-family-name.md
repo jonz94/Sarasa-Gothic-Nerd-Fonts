@@ -54,3 +54,19 @@
 | sarasa-ui-k-nerd-font.zip           | `Sarasa UI K Nerd Font`          |
 | sarasa-ui-sc-nerd-font.zip          | `Sarasa UI SC Nerd Font`         |
 | sarasa-ui-tc-nerd-font.zip          | `Sarasa UI TC Nerd Font`         |
+
+## What are the names?
+
+- Style dimension
+  - Latin/Greek/Cyrillic character set being [Inter](https://github.com/rsms/inter)
+    - Quotes (`“”`) are full width —— **Gothic**
+    - Quotes (`“”`) are narrow —— **UI**
+  - Latin/Greek/Cyrillic character set being [Iosevka](https://github.com/be5invis/Iosevka)
+    - Em dashes (`——`) are full width —— **Mono**
+    - Em dashes (`——`) are half width —— **Term**
+    - No ligature, Em dashes (`——`) are half width —— **Fixed**
+- Orthography dimension
+  - `CL`: Classical orthography
+  - `SC`, `TC`, `J`, `K`, `HC`: Regional orthography, following [Source Han Sans](https://github.com/adobe-fonts/source-han-sans) notations.
+
+Credits: https://github.com/be5invis/Sarasa-Gothic/tree/218385ca597cff4bc834f49684415cce91cb41a0#what-are-the-names
