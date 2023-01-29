@@ -71,6 +71,13 @@ brew install jonz94/sarasa-nerd-fonts/font-sarasa-nerd-font-ttc
 
 ## [List of TTF Font Family Name](docs/ttf-font-family-name.md)
 
+## Web Fonts (WOFF/WOFF2)
+
+> What is WOFF? 👉 [The Web Open Font Format (WOFF) - Developer guides | MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF)
+
+- WOFF can be downloaded at [woff-sarasa-gothic-nerd-fonts release page](https://github.com/jonz94/woff-sarasa-gothic-nerd-fonts/releases/latest)
+- WOFF2 can be downloaded at [woff2-sarasa-gothic-nerd-fonts release page](https://github.com/jonz94/woff2-sarasa-gothic-nerd-fonts/releases/latest)
+
 ## Notable Changes
 
 See [CHANGELOG.md](CHANGELOG.md)
