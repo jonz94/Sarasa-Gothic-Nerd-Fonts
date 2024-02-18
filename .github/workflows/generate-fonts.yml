@@ -39,7 +39,7 @@ jobs:
         with:
           repository: 'be5invis/Sarasa-Gothic'
           tag: ${{ env.LATEST_TAG }}
-          fileName: 'sarasa-gothic-ttf-${{ env.LATEST_VERSION }}.7z'
+          fileName: 'Sarasa-TTF-${{ env.LATEST_VERSION }}.7z'
       - run: ls -l
 
       - name: Upload sarasa-gothic-ttf.7z
@@ -108,6 +108,29 @@ jobs:
           python-version: '3.x'
       - name: install configparser
         run: pip install configparser
+      - run: ls -l
+      - name: Rename target filename
+        run: |
+          matrix_style=${{ matrix.styles }}
+          matrix_style=${matrix_style/-slab/Slab}
+          original_style=${matrix_style^}
+          echo original_style is ${original_style}
+
+          matrix_orthography=${{ matrix.orthographies }}
+          original_orthography=${matrix_orthography^^}
+          echo original_orthography is ${original_orthography}
+
+          matrix_variant=${{ matrix.variants }}
+          matrix_variant=${matrix_variant/italic/Italic}
+          matrix_variant=${matrix_variant/bold/Bold}
+          matrix_variant=${matrix_variant/light/Light}
+          original_variant=${matrix_variant^}
+          echo original_variant is ${original_variant}
+
+          original_filename="Sarasa${original_style}${original_orthography}-${original_variant}"
+          echo original_filename is ${original_filename}
+
+          mv "${original_filename}.ttf" "${FILENAME}.ttf"
       - run: ls -l
       - run: mkdir -p "${PWD}/outputs"
       - name: patch font
@@ -204,6 +227,29 @@ jobs:
           python-version: '3.x'
       - name: install configparser
         run: pip install configparser
+      - run: ls -l
+      - name: Rename target filename
+        run: |
+          matrix_style=${{ matrix.styles }}
+          matrix_style=${matrix_style/-slab/Slab}
+          original_style=${matrix_style^}
+          echo original_style is ${original_style}
+
+          matrix_orthography=${{ matrix.orthographies }}
+          original_orthography=${matrix_orthography^^}
+          echo original_orthography is ${original_orthography}
+
+          matrix_variant=${{ matrix.variants }}
+          matrix_variant=${matrix_variant/italic/Italic}
+          matrix_variant=${matrix_variant/bold/Bold}
+          matrix_variant=${matrix_variant/light/Light}
+          original_variant=${matrix_variant^}
+          echo original_variant is ${original_variant}
+
+          original_filename="Sarasa${original_style}${original_orthography}-${original_variant}"
+          echo original_filename is ${original_filename}
+
+          mv "${original_filename}.ttf" "${FILENAME}.ttf"
       - run: ls -l
       - run: mkdir -p "${PWD}/outputs"
       - name: patch font
