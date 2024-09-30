@@ -145,6 +145,7 @@ jobs:
       - name: install fonttools
         run: pip install fonttools
       - name: correcting xAvgCharWidth to fix alignment issue
+        if: ${{ matrix.styles != 'gothic' && matrix.styles != 'ui' }}
         run: |
           ttx -t "OS/2" "${FILENAME}.ttf"
           ttx -t "OS/2" "${FILENAME}-nerd-font.ttf"
@@ -158,6 +159,7 @@ jobs:
           mv "${FILENAME}-nerd-font.ttf" "${FILENAME}-nerd-font.original.ttf"
           ttx -o "${FILENAME}-nerd-font.ttf" -m "${FILENAME}-nerd-font.original.ttf" "${FILENAME}-nerd-font.ttx"
       - name: build hdmx table to fix alignment issue
+        if: ${{ matrix.styles != 'gothic' && matrix.styles != 'ui' }}
         run: python build-hdmx-for-sarasa.py "${FILENAME}-nerd-font.ttf"
       - name: patch TTF font family name
         run: python patch-ttf-name-for-sarasa-nerd.py "${FILENAME}-nerd-font.ttf" ${{ matrix.styles }} ${{ matrix.orthographies }} ${{ matrix.variants }} ${{ env.NERD_FONTS_VERSION }} ${{ github.ref_name }}
@@ -264,6 +266,7 @@ jobs:
       - name: install fonttools
         run: pip install fonttools
       - name: correcting xAvgCharWidth to fix alignment issue
+        if: ${{ matrix.styles != 'gothic' && matrix.styles != 'ui' }}
         run: |
           ttx -t "OS/2" "${FILENAME}.ttf"
           ttx -t "OS/2" "${FILENAME}-nerd-font.ttf"
@@ -277,6 +280,7 @@ jobs:
           mv "${FILENAME}-nerd-font.ttf" "${FILENAME}-nerd-font.original.ttf"
           ttx -o "${FILENAME}-nerd-font.ttf" -m "${FILENAME}-nerd-font.original.ttf" "${FILENAME}-nerd-font.ttx"
       - name: build hdmx table to fix alignment issue
+        if: ${{ matrix.styles != 'gothic' && matrix.styles != 'ui' }}
         run: python build-hdmx-for-sarasa.py "${FILENAME}-nerd-font.ttf"
       - name: patch TTF font family name
         run: python patch-ttf-name-for-sarasa-nerd.py "${FILENAME}-nerd-font.ttf" ${{ matrix.styles }} ${{ matrix.orthographies }} ${{ matrix.variants }} ${{ env.NERD_FONTS_VERSION }} ${{ github.ref_name }}
