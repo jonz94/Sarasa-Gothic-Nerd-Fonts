@@ -4,7 +4,7 @@
     "fmt": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "prettier-plugin-packagejson": "^2.5.15"
   }
 }
